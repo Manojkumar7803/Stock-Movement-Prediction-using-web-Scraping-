@@ -7,7 +7,7 @@ python train_model.py
 import tweepy
 
 # Authenticate with Twitter API
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth =tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
@@ -15,6 +15,7 @@ api = tweepy.API(auth)
 tweets = tweepy.Cursor(api.search_tweets, q='#stocks', lang="en").items(100)
 for tweet in tweets:
     print(tweet.text)
+
 //Data Processing 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
